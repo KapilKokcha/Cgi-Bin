@@ -1,0 +1,34 @@
+- hosts: all
+  vars_files:
+        - i_touch_ansible.yml
+#  vars_prompt:
+#     - name: x
+#       prompt: "enter the vg name to be given" 
+#       private: no
+#     - name: y
+#       prompt: "enter the lv name to be given" 
+#       private: no
+#     - name: s
+#       prompt: "enter the size name to be given" 
+#       private: no
+#     - name: a
+#       prompt: "enter the disk 1  to be given" 
+#       private: no
+#     - name: b
+#       prompt: "enter the disk 2 to be given" 
+#       private: no
+#     - name: c
+#       prompt: "enter the PE size to be given" 
+#       private: no
+
+
+  tasks:
+     - lvg:
+         vg: "{{ u }}"
+         pvs: "{{ r }}","{{ s }}"
+         pesize: "{{ t }}"
+     - lvol:
+         vg: "{{ u }}"
+         lv: "{{ v }}"
+         size: "{{ w }}"
+         pvs: "{{ r }}","{{ s }}"

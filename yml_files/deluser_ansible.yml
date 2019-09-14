@@ -1,0 +1,10 @@
+- hosts: all
+  vars_files: 
+    - i_touch_ansible.yml
+#      private: no
+#      prompt: "enter the name of user to be deleted "
+  tasks: 
+    - user:
+         name: "{{ x }}"
+         state: absent
+      

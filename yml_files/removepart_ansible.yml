@@ -1,0 +1,15 @@
+- hosts: all
+  vars_files:
+        - i_touch_ansible.yml
+#  vars_prompt:
+#     - name: x
+#       prompt: "enter the device whose partition to be removed"
+#       private: no
+#     - name: y
+#       prompt: "enter the partition number to be removed"
+#       private: no 
+  tasks: 
+     - parted:
+         device: "{{ x }}"
+         number: "{{ y }}"
+         state: absent

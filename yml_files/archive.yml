@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+    - name: Archive
+      archive:
+        path: /root/arc
+        dest: /home/devops/remove1.tar.bz2
+        format: bz2
+        

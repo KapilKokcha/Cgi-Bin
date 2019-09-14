@@ -1,0 +1,14 @@
+- hosts: localhost
+  
+  tasks:
+     
+    - aws_s3:
+  
+        bucket: bucket1118
+
+        mode: create
+
+        permission: public-read
+     
+        aws_access_key: 
+        aws_secret_key: 

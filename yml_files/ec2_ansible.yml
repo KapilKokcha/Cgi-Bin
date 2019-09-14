@@ -1,0 +1,15 @@
+- hosts: localhost
+  vars_files:
+        - i_touch_ansible.yml
+  gather_facts: False
+  tasks: 
+    - ec2:
+        key_name: "{{ o }}"
+        region: "{{ p }}"
+        instance_type: "{{ q }}"
+        image: "{{ r }}"
+        wait: true
+        vpc_subnet_id: "{{ s }}"        
+        aws_access_key: "{{ t }}"
+        aws_secret_key: "{{ u }}"
+        assign_public_ip: "{{ w }}"

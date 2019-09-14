@@ -1,0 +1,16 @@
+- hosts: all
+  vars_prompt:
+     - name: c
+       private: no
+       prompt: "enter the file you want to chage oqwner and group"
+     - name: x
+       private: no
+       prompt: "enter the owner u want to be of file"
+     - name: y
+       private: no
+       prompt: "enter the group u want it to belong" 
+  tasks:
+      - file:
+           dest: "{{ c }}"
+           owner: "{{ x }}"
+           group: "{{ y }}"

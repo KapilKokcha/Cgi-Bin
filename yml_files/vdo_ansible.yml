@@ -1,0 +1,19 @@
+- hosts: all
+  vars_files:
+      - i_touch_ansible.yml
+#  vars_prompt:
+#     - name: x
+#       prompt: "enter the vdo name to be given"
+#       private: no
+#     - name: y
+#       prompt: "enter the drive path you want it to make on vdo"
+#       private: no
+#     - name: s
+#       prompt: "enter the size of vdo to be made"
+#       private: no
+  tasks:
+    - vdo:
+        name: "{{ x }}"  
+        state: present
+        device: "{{ y }}"
+        logicalsize: "{{ s }}"

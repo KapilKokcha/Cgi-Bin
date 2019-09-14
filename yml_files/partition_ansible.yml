@@ -1,0 +1,9 @@
+- hosts: all
+  vars_files:
+        - i_touch_ansible.yml
+  tasks:
+     - parted:
+          device: "{{ x }}"
+          number: "{{ y }}"
+          state: present
+          part_end: "{{ l }}"

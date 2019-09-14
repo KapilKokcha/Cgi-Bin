@@ -1,0 +1,11 @@
+- hosts: all
+  vars_files:
+        - i_touch_ansible.yml
+#  vars_prompt:
+#     - name: x
+#       prompt: "enter the name of vdo to be removed"
+#       private: no
+  tasks:
+     - vdo:
+         name: "{{ x }}"
+         state: absent

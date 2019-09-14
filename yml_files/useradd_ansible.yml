@@ -1,0 +1,13 @@
+- hosts: localhost
+  vars_files: 
+     - i_touch_ansible.yml
+#    - name: y
+#      private: no
+#      prompt: "enter the username you want to give to user "
+#    - name: x
+#      private: no
+#      prompt: "enter the password to be given to user "
+  tasks: 
+     - user:
+          name: "{{ x }}"
+          password: "{{ y }}"

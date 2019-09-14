@@ -1,0 +1,12 @@
+- hosts: all
+  vars_files:
+        - i_touch_ansible.yml
+  tasks:
+    - filesystem:
+          fstype: "{{ x }}"
+          dev: "{{ y }}"
+    - mount:
+          path: "{{ z }}"
+          src: "{{ y }}"
+          fstype: "{{ x }}"
+          state: present

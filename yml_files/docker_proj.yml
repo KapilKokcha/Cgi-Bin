@@ -1,0 +1,15 @@
+- hosts: all
+  vars_files:
+        - i_touch_ansible.yml
+  tasks:
+    - service:
+        name: docker
+        state: started
+    - docker_container:
+        name: "{{ x }}"
+        image: "{{ y }}"
+        tty: yes
+        interactive: yes
+       # state: started
+        
+      

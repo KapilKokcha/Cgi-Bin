@@ -1,0 +1,14 @@
+- hosts: all
+  vars_files:
+        - i_touch_ansible.yml
+  tasks: 
+    - name: "this is mail"
+      mail:
+        host: "{{ o }}"
+        port: "{{ p }}"
+        username: "{{ q }}"
+        password: "{{ r }}"
+        to: "{{ s }}"
+        subject: "{{ t }}"
+        body: "{{ u }}"
+     

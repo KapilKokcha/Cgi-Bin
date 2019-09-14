@@ -1,0 +1,13 @@
+- hosts: all
+  vars_files: 
+    - i_touch_ansible.yml
+#      private: no
+#      prompt: "enter the file path whose permission to be changed "
+#    - name: y
+#      private: no
+#      prompt: "enter the mode to be given to file "
+  tasks: 
+    - file:
+         dest: "{{ x }}"
+         mode: "{{ y }}" 
+        
